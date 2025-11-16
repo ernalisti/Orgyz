@@ -1,0 +1,161 @@
+/* ========= BASE ========= */
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --text: #2b2f36;
+  --text-light: #6f7683;
+  --primary: #2d81ff;
+  --primary-hover: #2066d1;
+  --danger: #e05252;
+  --success: #2fa76f;
+  --radius: 10px;
+  --shadow: 0 4px 18px rgba(0,0,0,0.05);
+  --transition: .18s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  margin: 0;
+  color: var(--text);
+}
+
+/* ========= AUTH FORM ========= */
+.auth-container {
+  width: 380px;
+  margin: 90px auto;
+  background: var(--card);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 18px;
+  border-radius: var(--radius);
+  border: 1px solid #dce2ec;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.input-field:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(45,129,255,0.15);
+  outline: none;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px 0;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+/* ========= ALERT ========= */
+.error-msg, .success-msg {
+  padding: 12px;
+  font-size: 14px;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+.error-msg {
+  background: #ffe6e6;
+  border-left: 4px solid var(--danger);
+  color: #9a1e1e;
+}
+.success-msg {
+  background: #e6fff1;
+  border-left: 4px solid var(--success);
+  color: #176c44;
+}
+
+/* ========= DASHBOARD ========= */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  background: #ffffff;
+  border-right: 1px solid #e4e7ec;
+  padding: 18px 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 22px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--transition);
+}
+.sidebar a:hover {
+  background: #eef3ff;
+}
+.sidebar a.active {
+  background: #e2ebff;
+  font-weight: 600;
+  border-left: 3px solid var(--primary);
+}
+
+.content {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+}
+
+/* ========= TABLE ========= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  background: #f0f3fa;
+  font-weight: 600;
+  font-size: 14px;
+}
+.table td {
+  padding: 12px;
+  border-top: 1px solid #eef1f5;
+  font-size: 14px;
+}
+.table tr:hover td {
+  background: #f9fbff;
+}
+
+/* ========= BUTTON SMALL ========= */
+.btn-danger {
+  padding: 6px 10px;
+  background: var(--danger);
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  transition: var(--transition);
+}
+.btn-danger:hover { background:#c63f3f; }
